@@ -1,0 +1,885 @@
+// Create Podcast SCSS
+
+@keyframes rotating {
+    from {
+        -ms-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    to {
+        -ms-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+.create-podcast-container {
+    font-family: $roboto_font;
+
+    .welcome-msg {
+        font-size: $fs-24;
+        color: $fc-black;
+        margin-bottom: 10px;
+        font-family: $montserrat_font;
+
+        .user-name {
+            font-weight: 900;
+        }
+    }
+
+    .steps-guide {
+        font-size: $fs-16;
+        margin-bottom: 38px;
+    }
+
+    .step-1-header[data-space="true"] {
+        justify-content: space-between;
+        display: flex;
+    }
+
+    .step-1-header {
+        font-family: $montserrat_font;
+        color: $fc-black;
+        font-weight: $fw-bold;
+        font-size: $fs-24;
+        display: flex;
+        @media only screen and (max-width: 425px) {
+            display: block;
+        }
+        align-items: center;
+        margin-bottom: 30px;
+
+        .step-1-hd {
+            border-radius: 8px;
+            background: #ffd100;
+            width: 100px;
+            height: 38px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            @media only screen and (max-width: 425px) {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    .cover-art-upload {
+        display: flex;
+        margin-bottom: 30px;
+
+        .cover-art-upload-guideliness {
+            margin-left: 30px;
+
+            .attach-cover-art-guide {
+                color: $fc-grey;
+                margin-top: 20px;
+                @media only screen and (max-width: 425px) {
+                    margin-top: 0;
+                }
+                letter-spacing: 0.12px;
+                font-size: $fs-12;
+                margin-bottom: 8px;
+                font-weight: $fw-medium;
+            }
+
+            .file-size-guide {
+                color: $fc-grey;
+                font-weight: $fw-300;
+                margin-bottom: 38px;
+            }
+
+            .placeholder-msg {
+                color: $fc-red;
+                letter-spacing: 0.12px;
+                font-weight: $fw-medium;
+                font-size: $fs-12;
+            }
+        }
+    }
+
+    .create-pc-form {
+        .create-pc-form-element {
+            margin-bottom: 22px;
+        }
+    }
+}
+// used at multiple places 
+.mobile-button {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 96px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    box-shadow: 0px -2px 6px #21212114;
+    border-radius: 8px 8px 0px 0px;
+    .cust-button {
+        width: calc(100% - 32px);
+    }
+}
+
+.create-pc-form-element:last-child {
+    @media only screen and (max-width: 425px) {
+        margin-top: 96px;
+    }
+   margin-top: 0;
+}
+
+// Create Episode SCSS
+.step-wise-common-box-style {
+    width: 72px;
+    height: 78px;
+    border-radius: 8px;
+    border: 1px solid #ffd100;
+    background: #fffdf7;
+    margin-right: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $fc-white;
+    font-size: $fs-42;
+    font-weight: 900;
+    @media only screen and (max-width: 420px) {
+        width: 49px;
+        height: 53px;
+    }
+}
+
+.editview-cre-ep-cont {
+    @extend .create-episode-container;
+    margin-bottom: 0;
+}
+
+.create-episode-container {
+    margin-bottom: 150px;
+    font-family: $roboto_font;
+    max-width: 1092px;
+    display: flex;
+
+    .step-2-form {
+        .step-2-header {
+            font-family: $montserrat_font;
+            color: $fc-black;
+            font-weight: $fw-bold;
+            font-size: $fs-24;
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            justify-content: space-between;
+
+            .step-2-hd {
+                border-radius: 8px;
+                background: #ffd100;
+                width: 100px;
+                height: 38px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: 20px;
+                @media only screen and (max-width: 425px) {
+                    margin-bottom: 10px;
+                }
+            }
+
+            .episode-create {
+                display: flex;
+                align-items: center;
+                @media only screen and (max-width: 425px) {
+                    display: block;
+                }
+            }
+        }
+
+        .create-ep-form {
+            .season-episode-numbers {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-gap: 20px;
+            }
+
+            .create-ep-form-element {
+                margin-bottom: 22px;
+            }
+        }
+
+        .cover-art-upload {
+            display: flex;
+            margin-bottom: 30px;
+
+            .cover-art-upload-guideliness {
+                margin-left: 30px;
+
+                .attach-cover-art-guide {
+                    color: $fc-grey;
+                    margin-top: 20px;
+                    letter-spacing: 0.12px;
+                    font-size: $fs-12;
+                    margin-bottom: 8px;
+                    font-weight: $fw-medium;
+                }
+
+                .file-size-guide {
+                    color: $fc-grey;
+                    font-weight: $fw-300;
+                    margin-bottom: 38px;
+                }
+
+                .placeholder-msg {
+                    color: $fc-red;
+                    letter-spacing: 0.12px;
+                    font-weight: $fw-medium;
+                    font-size: $fs-12;
+                }
+            }
+        }
+
+        .custom-file-upload {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+// Publish Podcast
+
+.publish-podcast-container {
+    margin: 30px 0 100px 0;
+    padding: 20px 20px 32px 20px;
+    background: #fffdf7;
+    border: 1px solid #e6e3da;
+    border-radius: 8px;
+
+    @media only screen and (max-width: 425px) {
+        margin-bottom: 96px;
+    }
+
+    .cust-button{
+        .MuiButton-label{
+            @media only screen and (max-width: 768px) {
+                font-size: 18px;
+            }
+        }
+    }
+
+    @media screen and (min-width: 426px) and (max-width: 768px) {
+        margin: 30px 0 30px 0;
+    }
+
+    .rss-wrapper {
+        .rss-link {
+            padding: 12px 18px 16px 16px;
+            border: 1px solid #d9d9d9;
+            border-radius: 8px;
+            background: #ffffff;
+            max-width: 376px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .rss-link-name {
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                margin-right: 12px;
+                margin-left: 12px;
+                font-size: $fs-16;
+                font-weight: $fw-medium;
+                color: $fc-black;
+                font-family: $roboto_font;
+            }
+
+            .copy-to-clipboard {
+                cursor: pointer;
+            }
+        }
+
+        .distribution-header {
+            font-weight: $fw-bold;
+            margin-top: 20px;
+            font-size: $fs-14;
+        }
+
+        .rss-companies {
+            display: flex;
+            margin-top: 12px;
+
+            & > div {
+                width: 72px;
+                height: 72px;
+                margin-right: 12px;
+                border-radius: 8px;
+                background: #0000000f;
+            }
+        }
+    }
+
+    .ott-data-wrapper {
+        .ott-data-hd {
+            font-size: $fs-14;
+            font-weight: $fw-bold;
+            margin-bottom: 6px;
+        }
+
+        .ott-data-sub-hd {
+            font-size: $fs-10;
+            margin-bottom: 20px;
+            font-family: $roboto_font;
+        }
+
+        .ott-list-wrapper {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 14px;
+            margin-bottom: 24px;
+            @media only screen and (max-width: 420px) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .ott-list {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                .logo-wrapper {
+                    position: relative;
+                    margin-bottom: 8px;
+
+                    .logo-outer {
+                        position: relative;
+                        width: 76px;
+                        height: 76px;
+                        background: transparent
+                            linear-gradient(
+                                180deg,
+                                #ffffff 0%,
+                                #ffd100 53%,
+                                #ffffff 100%
+                            );
+                        animation: rotating 2s linear infinite;
+                        border-radius: 50%;
+                    }
+
+                    .ott-logo {
+                        position: absolute;
+                        top: 3px;
+                        left: 3px;
+                    }
+
+                    .podcast-owner-image {
+                        background: $fc-white;
+                        border-radius: 50%;
+                    }
+                }
+
+                .ott-status {
+                    font-family: $roboto_font;
+                    font-size: $fs-12;
+                    color: #212121;
+                    font-weight: $fw-medium;
+                    letter-spacing: 0.12px;
+                    margin-bottom: 3px;
+                    .live-circle {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        .live-outer-circle {
+                            width: 15px;
+                            height: 15px;
+                            border-radius: 50%;
+                            padding: 3px;
+                            opacity: 0.1;
+                            background-color: #00a878;
+                            animation: oval-beat 1.5s ease-in-out infinite both;
+                        }
+                        .live-inner-circle {
+                            width: 9px;
+                            height: 9px;
+                            border-radius: 50%;
+                            margin-left: -15px;
+                            box-shadow: 0 1px 4px 0 #00a878;
+                            background-color: #00a878;
+                        }
+                    }
+                }
+
+                .ott-desc {
+                    font-size: $fs-10;
+                    font-weight: $fw-300;
+                    font-family: $roboto_font;
+                    color: #212121;
+                }
+            }
+        }
+
+        .rss-feed-details {
+            position: relative;
+            .rss-copy-msg {
+                box-shadow: 0px 18px 36px #00000029;
+                border: 1px solid #f7f7f7;
+                border-radius: 8px;
+                padding: 40px 40px 30px 40px;
+                background: #ffffff;
+                width: calc(600px - 80px);
+                bottom: 77%;
+                left: -25%;
+                position: absolute;
+                .rss-copy-hd {
+                    letter-spacing: 0.4px;
+                    font-family: $montserrat_font;
+                    font-size: $fs-20;
+                    font-weight: $fw-bold;
+                    margin-bottom: 20px;
+                }
+                .rss-copy-desc {
+                    letter-spacing: 0.28px;
+                    font-family: $roboto_font;
+                    font-size: $fs-14;
+                    text-align: left;
+                    margin-bottom: 10px;
+                    line-height: 21px;
+                    color: #6b6b6b;
+                    .user-name {
+                        color: #212121;
+                    }
+                }
+                .copy-btn-wrapper {
+                    color: $fc-black;
+                    font-size: 16px;
+                    font-weight: 500;
+                    display: flex;
+                    justify-content: flex-end;
+                    .done-icon {
+                        margin-right: 6px;
+                    }
+                }
+            }
+            .copy-rss-hd {
+                font-size: $fs-14;
+                font-weight: $fw-bold;
+                margin-bottom: 12px;
+            }
+        }
+    }
+
+    .terms-hd {
+        font-size: $fs-14;
+        font-weight: $fw-bold;
+        margin: 20px 0 12px 0;
+        color: $fc-black;
+        @media only screen and (max-width: 768px) {
+            font-size: 12px;
+        }
+    }
+
+    .terms-and-conditions {
+        color: #6b6b6b;
+        letter-spacing: 0.28px;
+        font-size: $fs-14;
+        font-family: $roboto_font;
+        margin-bottom: 30px;
+        font-weight: $fw-regular;
+        @media only screen and (max-width: 768px) {
+            font-size: 12px;
+        }
+
+        .each-term {
+            margin-bottom: 20px;
+        }
+    }
+
+    .policy-redirection {
+        font-size: $fs-16;
+        font-weight: $fw-medium;
+        letter-spacing: 0.16px;
+        margin-top: 4px;
+        font-family: $roboto_font;
+        text-align: center;
+        .cust-button{
+
+            .MuiButton-label{
+                @media only screen and (max-width: 768px) {
+                    font-size: 12px;
+                }
+    
+            }
+           
+        }
+    }
+}
+
+// Generic Step details
+
+.step-details {
+    .user-name-speaks {
+        color: $fc-black;
+        margin-bottom: 40px;
+        font-weight: $fw-extra-bold;
+        font-size: $fs-24;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .podcast-name {
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .edit-icon {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8px;
+
+            &:hover {
+                background: #ffd10033;
+                border-radius: 50%;
+            }
+
+            &:active {
+                background: #ffd1005c;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    .step-wise-details {
+        display: flex;
+        margin-bottom: 16px;
+
+        .podcast-coverart-img {
+            border-radius: 8px;
+            width: 190px;
+            height: 190px;
+            object-fit: cover;
+            border: 1px solid #999;
+            @media only screen and (max-width: 420px) {
+                width: 120px;
+                height: 120px;
+            }
+        }
+
+        .average-no-of-listeners {
+            margin-left: 20px;
+
+            .avg-lstnr-count {
+                font-weight: $fw-extra-bold;
+                color: #ffd100;
+                font-size: $fs-44;
+                @media only screen and (max-width: 425px) {
+                    font-size: 32px;
+                }
+            }
+
+            .avg-list-per-episode {
+                font-size: $fs-24;
+                margin-bottom: 20px;
+                @media only screen and (max-width: 425px) {
+                    font-size: 14px;
+                }
+            }
+
+            .listener-equation {
+                font-size: $fs-10;
+            }
+        }
+
+        .step-progress-details {
+            margin-left: 20px;
+            @media only screen and (max-width: 420px) {
+                margin-left: 16px;
+            }
+
+            .steps-progress {
+                margin-bottom: 6px;
+                display: flex;
+
+                .stepper {
+                    @extend .step-wise-common-box-style;
+                }
+
+                .completed-step {
+                    background: #ffd100;
+                }
+
+                .step-in-progress {
+                    background: repeating-linear-gradient(
+                        -45deg,
+                        #ffe8a5 0px,
+                        #ffe8a5 5px,
+                        #ffd100 5px,
+                        #ffd100 10px
+                    );
+                }
+
+                .step-3-progress {
+                    @extend .step-wise-common-box-style;
+                }
+            }
+
+            .prev-step-acmpshmts {
+                line-height: 26px;
+                width: 228px;
+                font-size: $fs-24;
+                @media only screen and (max-width: 420px) {
+                    font-size: 12px;
+                    line-height: normal;
+                    width: 155px;
+                }
+
+                .awesome-text {
+                    font-weight: $fw-extra-bold;
+                }
+            }
+        }
+    }
+
+    .step-2-description {
+        font-family: $roboto_font;
+        letter-spacing: 0.28px;
+        color: $fc-grey;
+        font-size: $fs-14;
+        word-break: break-all;
+        margin-bottom: 16px;
+    }
+
+    .read-more-less {
+        cursor: pointer;
+        color: $fc-black;
+        font-weight: $fw-bold;
+        font-size: $fs-14;
+        margin-bottom: 16px;
+        text-decoration: underline;
+    }
+
+    .expanded-step-2-description {
+        overflow: unset;
+        text-overflow: unset;
+        display: unset;
+        -webkit-box-orient: unset;
+        -webkit-line-clamp: unset;
+        height: 100%;
+        transition: height 0.2s ease;
+        margin-bottom: 4px;
+    }
+
+    .categories-languages {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        @media only screen and (max-width: 420px) {
+           display: inline;
+
+         }
+        
+        .categories {
+            .pd-cat-hd {
+                font-family: $roboto_font;
+                letter-spacing: 0.12px;
+                color: $fc-black;
+                font-weight: $fw-300;
+                font-size: $fs-12;
+                margin-bottom: 8px;
+            }
+
+            .category-wrapper {
+                font-family: $roboto_font;
+                font-weight: $fw-medium;
+                color: $fc-black;
+                font-size: $fs-14;
+                letter-spacing: 0.28px;
+                display: flex;
+                align-items: center;
+            }
+            @media only screen and (max-width: 420px) {
+                margin-bottom: 16px;
+     
+              }
+        }
+
+        .languages {
+            font-family: $roboto_font;
+            font-weight: $fw-medium;
+
+            .pd-lan-hd {
+                letter-spacing: 0.12px;
+                color: $fc-black;
+                font-weight: $fw-300;
+                font-size: $fs-12;
+                margin-bottom: 8px;
+            }
+        }
+    }
+}
+
+// episode list
+
+.episode-list-wrapper {
+    display: flex;
+
+    .episodes-list {
+        width: 100%;
+
+        .episode-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            @media screen and (max-width: 425px) {
+                margin-bottom: 24px;
+            }
+            align-items: center;
+
+            .epsiode-hd {
+                font-size: $fs-24;
+                @media screen and (max-width: 425px) {
+                    font-size: $fs-18;
+                }
+                font-weight: $fw-bold;
+            }
+
+            .add-episode-cta {
+                width: 44px;
+                height: 44px;
+                @media screen and (max-width: 425px) {
+                    width: 36px;
+                    height: 36px;
+                }
+                background: #212121;
+                color: #ffffff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                font-size: $fs-48;
+                cursor: pointer;
+                &:hover {
+                    background: #000000;
+                    box-shadow: 0px 2px 6px #00000029;
+                }
+            }
+        }
+    }
+}
+
+// Step wise
+
+.step-wise-creations {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 196px;
+
+    @media screen and (min-width: 1024px) and (max-width: 1279px) {
+        grid-gap: 28px;
+    }
+
+    @media screen and (max-width: 768px) {
+        display: inline;
+    }
+
+    .left-side-container {
+        width: 100%;
+        max-width: 448px;
+    }
+
+    .right-side-container {
+        width: 100%;
+        max-width: 448px;
+
+        @media screen and (min-width: 426px) and (max-width: 768px) {
+            margin-top: 30px;
+            margin-bottom: 30px;
+        } 
+
+        @media only screen and (max-width: 425px) {
+            margin-top: 0px;
+        }
+    }
+}
+
+.cross-icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    border-radius: 50%;
+    padding: 8px;
+    width: fit-content;
+    height: fit-content;
+    &:hover {
+        background: #ffd10033;
+    }
+
+    &:active {
+        background: #ffd1005c;
+    }
+
+    .cross-icon {
+        width: 20px;
+        height: 20px;
+        background: #212121;
+        box-shadow: 0px 2px 6px #00000029;
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        font-size: 25px;
+        font-weight: 300;
+        transform: rotate(45deg);
+        cursor: pointer;
+    }
+}
+
+@keyframes oval-beat {
+    from {
+        transform: scale(1.1);
+    }
+
+    25% {
+        transform: scale(0.9);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    75% {
+        transform: scale(0.9);
+    }
+}
+
+.violation-dialog-hd {
+    color: $fc-black;
+    letter-spacing: 0.14px;
+    font-size: $fs-14;
+    font-weight: $fw-medium;
+    font-family: $roboto_font;
+    margin-bottom: 24px;
+}
+
+.vio-sub-hd {
+    letter-spacing: 0.28px;
+    font-size: $fs-14;
+    color: $fc-black;
+    margin-bottom: 24px;
+    .vio-content {
+        color: $fc-grey;
+    }
+}
+
+.violation-form {
+    display: grid;
+    grid-template-columns: 0.75fr 0.25fr;
+    grid-gap: 24px;
+}

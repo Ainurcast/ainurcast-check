@@ -1,0 +1,175 @@
+.pod-card-shimmer {
+  .pod-cards {
+    padding-top: 100px;
+    margin: 0 auto;
+    max-width: 904px;
+    column-count: 4;
+    min-height: 74vh;
+    margin-bottom: 60px;
+    @media only screen and (min-width: 1920px) {
+      max-width: 1270px;
+    }
+    @media only screen and (min-width: 1024px) and (max-width: 1919px) {
+      max-width: 904px;
+    }
+    @media only screen and (min-width: 768px) and (max-width: 1023px) {
+      max-width: 674px;
+    }
+    @media only screen and (min-width: 320px) and (max-width: 767px) {
+      max-width: 90%;
+    }
+    .pod-card {
+      border-radius: 10px;
+      border: solid 0.5px #f7f7f7;
+      width: 100%;
+      margin-bottom: 30px;
+      page-break-inside: avoid;
+      break-inside: avoid;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    .pod-card0 {
+      height: 402px;
+    }
+    .pod-card1 {
+      height: 541px;
+    }
+    .pod-card2 {
+      height: 408px;
+      @media only screen and (min-width: 768px) and (max-width: 1023px) {
+        height: 502px;
+      }
+    }
+    .pod-card3 {
+      height: 502px;
+    }
+    .card-in {
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      animation-name: cardShimmer;
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      border: solid 0.5px #f7f7f7;
+      position: relative;
+      background: #f6f7f8;
+      background-image: linear-gradient(
+        to right,
+        #f6f7f8 0%,
+        #edeef1 20%,
+        #f6f7f8 40%,
+        #f6f7f8 100%
+      );
+      background-repeat: no-repeat;
+    }
+    @keyframes cardShimmer {
+      0% {
+        background-position: -468px 0;
+      }
+      100% {
+        background-position: 468px 0;
+      }
+    }
+  }
+}
+
+.pod-card-detail-shimmer {
+  display: flex;
+  @media only screen and (max-width: 420px) {
+    flex-wrap: wrap;
+  }
+  .pod-card-image {
+    width: 329px;
+    height: 595px;
+    margin-bottom: 1.25rem;
+    margin-top: 21.165px;
+    @media only screen and (min-width: 1920px) {
+      width: 462px;
+    }
+    @media only screen and (min-width: 1024px) and (max-width: 1919px) {
+      width: 329px;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+      width: 249px;
+    }
+    @media only screen and (min-width: 320px) and (max-width: 767px) {
+      width: 100%;
+    }
+  }
+
+  @media only screen and (max-width: 420px) {
+    .pod-card-image {
+      width: 100%;
+      height: 595px;
+    }
+  }
+  .pod-cast-description {
+    margin-left: 2.5rem;
+    margin-top: 21.165px;
+    height: 595px;
+    width: 100%;
+    flex: 1;
+    @media only screen and (max-width: 420px) {
+      margin-left: 0px;
+    }
+    @for $i from 1 through 23 {
+      .description#{$i} {
+        @if $i <6 {
+          width: 100%;
+        } @else if $i <12 {
+          width: 75%;
+        } @else if $i <18 {
+          width: 50%;
+        } @else {
+          width: 30%;
+        }
+        height: 18px;
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+
+  .pod-detail-shimmer {
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-name: cardShimmer;
+    border-radius: 10px;
+    background: #f6f7f8;
+    background-image: linear-gradient(
+      to right,
+      #f6f7f8 0%,
+      #edeef1 20%,
+      #f6f7f8 40%,
+      #f6f7f8 100%
+    );
+    background-repeat: no-repeat;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .pod-card-shimmer {
+    .pod-cards {
+      column-count: 3;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .pod-card-shimmer {
+    .pod-cards {
+      column-count: 2;
+    }
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .pod-card-shimmer {
+    .pod-cards {
+      column-count: 1;
+    }
+  }
+}

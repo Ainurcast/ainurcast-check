@@ -1,0 +1,163 @@
+.active-header {
+    box-shadow: 0px 6px 16px #00000029;
+    transition: all 0.2s linear;
+}
+.password-quality-chks {
+    margin-top: 6px;
+    margin-left: 16px;
+    display: flex;
+    justify-content: space-between;
+    font-family: $roboto_font;
+
+    .pwd-type {
+        font-size: $fs-12;
+        letter-spacing: 0.12px;
+        font-weight: $fw-medium;
+    }
+    .pure-red {
+        color: #e60000;
+    }
+    .normal-red {
+        color: #a86200;
+    }
+    .violet {
+        color: #008533;
+    }
+
+    .pwd-quality {
+        .pwd-quality-wrapper {
+            display: flex;
+            align-items: flex-start;
+            .icon {
+                margin-right: 8px;
+            }
+            .msg {
+                font-size: $fs-12;
+                color: #6b6b6b;
+                font-weight: $fw-300;
+                letter-spacing: 0.12px;
+            }
+        }
+    }
+}
+
+.d-flex {
+    display: flex;
+}
+
+$pixels: (
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100
+);
+$positions: (top, right, bottom, left);
+
+@each $pixel in $pixels {
+    @each $position in $positions {
+        .margin-#{$position}-#{$pixel} {
+            margin-#{$position}: #{$pixel}px;
+        }
+
+        .padding-#{$position}-#{$pixel} {
+            padding-#{$position}: #{$pixel}px;
+        }
+    }
+}

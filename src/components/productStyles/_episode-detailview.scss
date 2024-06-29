@@ -1,0 +1,263 @@
+.episode-detail-view-container {
+    padding-top: 100px;
+    margin: 0 auto;
+    max-width: 1092px;
+    @media screen and (min-width: 320px) and (max-width: 768px) {
+        max-width: 448px;
+    }
+    @media only screen and (max-width: 420px) {
+        padding: 16px;
+    }
+    .episode-dtv-hd {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+        @media only screen and (max-width: 420px) {
+            margin-top: 60px;
+            margin-bottom: 10px;
+        }
+        .arrow-left {
+            cursor: pointer;
+            margin-left: -30px;
+            @media only screen and (max-width: 420px) {
+                margin-left: unset;
+            }
+        }
+        .episode-name-wrapper {
+            display: flex;
+            align-items: center;
+            @media only screen and (max-width: 420px) {
+                flex-direction: column;
+                align-items: flex-start;
+                margin-bottom: 30px;
+            }
+            .episode-name {
+                color: $fc-black;
+                font-weight: $fw-extra-bold;
+                margin-left: 16px;
+                font-size: $fs-24;
+                @media only screen and (max-width: 420px) {
+                    font-size: $fs-20;
+                }
+                @media only screen and (max-width: 420px) {
+                    margin-left: 2px;
+                }
+            }
+        }
+        .toggle-edit-episode {
+            display: flex;
+            align-items: center;
+            border-radius: 50%;
+            .edit-icon {
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 8px;
+                margin-left: 10px;
+                &:hover {
+                    background: #ffd10033;
+                    border-radius: 50%;
+                }
+                &:active {
+                    background: #ffd1005c;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+    .episode-info {
+        margin-bottom: 16px;
+        width: 454px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @media only screen and (max-width: 420px) {
+            width: 100%;
+        }
+        .episode-properties {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 16px;
+            width: fit-content;
+            .season-num {
+                .season-no-hd {
+                    color: $fc-black;
+                    font-weight: $fw-300;
+                    font-size: $fs-12;
+                    letter-spacing: 0.12px;
+                    margin-bottom: 8px;
+                }
+                .season-no {
+                    color: $fc-black;
+                    letter-spacing: 0.28px;
+                    font-size: $fs-14;
+                }
+            }
+            .episode-num {
+                .episode-no-hd {
+                    color: $fc-black;
+                    font-weight: $fw-300;
+                    font-size: $fs-12;
+                    letter-spacing: 0.12px;
+                    margin-bottom: 8px;
+                }
+                .episode-no {
+                    color: $fc-black;
+                    letter-spacing: 0.28px;
+                    font-size: $fs-14;
+                }
+            }
+            .explicit {
+                .explicit-hd {
+                    color: $fc-black;
+                    font-weight: $fw-300;
+                    font-size: $fs-12;
+                    letter-spacing: 0.12px;
+                    margin-bottom: 8px;
+                }
+                .explicit-value {
+                    color: $fc-black;
+                    letter-spacing: 0.28px;
+                    font-size: $fs-14;
+                }
+            }
+        }
+        .episode-live-status {
+            .status {
+                display: flex;
+                align-items: center;
+                @media only screen and (max-width: 420px) {
+                    flex-direction: column-reverse;
+                    align-items: flex-end;
+                }
+                .status-hd {
+                    color: $fc-grey;
+                    font-size: $fs-10;
+                    margin-right: 10px;
+                    @media only screen and (max-width: 420px) {
+                        margin-top: 12px;
+                    }
+                }
+                .not-live {
+                    border: 1px solid $fc-grey;
+                    border-radius: 4px;
+                    padding: 0 2px;
+                    color: $fc-grey;
+                    letter-spacing: 0.1px;
+                    font-size: $fs-10;
+                }
+                .live-circle {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    .live-symbol {
+                        width: 24px;
+                        height: 24px;
+                        background: #0085331a;
+                        border-radius: 50%;
+                        padding: 3px;
+                        animation: oval-beat 1.5s ease-in-out infinite both;
+                    }
+                    .red-symbol {
+                        width: 18px;
+                        height: 18px;
+                        background: #008533;
+                        border-radius: 50%;
+                        margin-left: -24px;
+                    }
+                }
+            }
+        }
+    }
+    .episode-players {
+        display: grid;
+        grid-template-columns: 0.75fr 1fr;
+        grid-gap: 40px;
+        @media screen and (min-width: 320px) and (max-width: 768px) {
+            grid-template-columns: unset;
+        }
+        @media only screen and (max-width: 420px) {
+            grid-gap: 32px;
+        }
+        .audio-player {
+            .episode-description {
+                letter-spacing: 0.28px;
+                color: $fc-black;
+                font-size: $fs-14;
+                margin-top: 16px;
+                font-family: $roboto_font;
+            }
+        }
+        .creations {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 26px;
+            @media only screen and (max-width: 420px) {
+                grid-gap: 32px;
+                grid-template-columns: unset;
+                margin-bottom: 84px;
+            }
+            .podclip-creation {
+                color: $fc-black;
+                font-family: $roboto_font;
+                .pod-clip {
+                    border-radius: 8px;
+                    border: 1px dashed $fc-black;
+                    box-shadow: 0px 2px 6px #00000029;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 146px;
+                    cursor: pointer;
+                    font-size: $fs-16;
+                    letter-spacing: 0.16px;
+                }
+                .podclip-desc {
+                    margin-top: 16px;
+                    letter-spacing: 0.28px;
+                    font-size: $fs-14;
+                }
+            }
+            .plog-creation {
+                font-family: $roboto_font;
+                color: $fc-black;
+                .plog {
+                    border-radius: 8px;
+                    border: 1px dashed $fc-black;
+                    box-shadow: 0px 2px 6px #00000029;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 146px;
+                    cursor: pointer;
+                    font-size: $fs-16;
+                    letter-spacing: 0.16px;
+                }
+                .plog-desc {
+                    margin-top: 16px;
+                    letter-spacing: 0.28px;
+                    font-size: $fs-14;
+                }
+            }
+        }
+    }
+}
+
+@keyframes oval-beat {
+    from {
+        transform: scale(1.1);
+    }
+
+    25% {
+        transform: scale(0.9);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    75% {
+        transform: scale(0.9);
+    }
+}

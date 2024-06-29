@@ -1,0 +1,270 @@
+.home-page-wrapper {
+  position: relative;
+  height: 100%;
+  opacity: 1;
+  transition: all 1s ease;
+  .posts {
+    padding-top: 100px;
+    margin: 0 auto;
+    max-width: 904px;
+    column-count: 4;
+    min-height: 77vh;
+    margin-bottom: 30px;
+    @media only screen and (min-width: 1920px) {
+      max-width: 1270px;
+      padding-top: 120px;
+    }
+    @media only screen and (min-width: 1024px) and (max-width: 1919px) {
+      max-width: 904px;
+    }
+    @media only screen and (min-width: 768px) and (max-width: 1023px) {
+      max-width: 674px;
+      margin-bottom: 60px;
+    }
+    @media only screen and (min-width: 320px) and (max-width: 767px) {
+      max-width: 90%;
+      margin-bottom: 60px;
+    }
+  }
+  .card-media {
+    .card-img {
+      width: 100%;
+      border-radius: 10px 10px 0 0;
+    }
+  }
+  .card {
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px #0000001a;
+    border: solid 0.5px #f7f7f7;
+    width: 100%;
+    margin-bottom: 60px;
+    @media only screen and (min-width: 320px) and (max-width: 1023px) {
+      margin-bottom: 30px;
+    }
+    break-inside: avoid;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      box-shadow: 0px 20px 20px #0000001a;
+      // transform: scale(1.01);
+    }
+    cursor: pointer;
+    .card-content {
+      padding: 20px;
+      .card-title {
+        font-family: Montserrat;
+        font-size: 16px;
+        @media only screen and (min-width: 1920px) {
+          font-size: 18px;
+        }
+        font-weight: 800;
+        color: #212121;
+        margin-bottom: 10px;
+      }
+      .card-desc {
+        font-family: Roboto;
+        font-size: 12px;
+        @media only screen and (min-width: 1920px) {
+          font-size: 14px;
+        }
+        color: #212121;
+      }
+    }
+  }
+}
+
+.animated-home-page {
+  transform: translateY(400px);
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  opacity: 0;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .home-page-wrapper {
+    .posts {
+      column-count: 3;
+    }
+  }
+}
+
+@media only screen and (min-width: 420px) and (max-width: 767px) {
+  .home-page-wrapper {
+    .posts {
+      column-count: 2;
+    }
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .home-page-wrapper {
+    .posts {
+      column-count: 1;
+    }
+  }
+}
+
+
+.landing-loader-container {
+  opacity: 1;
+  transition: all 2s ease;
+  margin: 0 auto;
+  @media only screen and (min-width: 1920px) {
+    max-width: 1270px;
+  }
+  @media only screen and (min-width: 1024px) and (max-width: 1919px) {
+    max-width: 904px;
+  }
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    max-width: 674px;
+  }
+  @media only screen and (min-width: 320px) and (max-width: 767px) {
+    max-width: 90%;
+  }
+  .animated-app-logo {
+    position: absolute;
+    transition: all 1s ease-in-out;
+    transform-origin: left;
+    // @media only screen and (min-width: 1920px) {
+    //   top: 23px;
+    // }
+    // @media only screen and (min-width: 1024px) and (max-width: 1919px) {
+    //   top: 18px;
+    // }
+    // @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    //   top: 18px;
+    // }
+    // @media only screen and (min-width: 320px) and (max-width: 767px) {
+    //   top: 0px;
+    // }
+  }
+  .app-logo {
+    margin: 100px 0px 20px 0px;
+    @media only screen and (min-width: 1920px) {
+      width: 280px;
+      height: 243px;
+    }
+    @media only screen and (min-width: 320px) and (max-width: 767px) {
+      width: 170px;
+      height: 147px;
+    }
+  }
+  .hide-caption {
+    transition: all 0.6s ease-in-out;
+    opacity: 0;
+  }
+  .company-vision {
+    text-align: center;
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 20px;
+    @media only screen and (min-width: 320px) and (max-width: 767px) {
+      font-size: 16px;
+    }
+    @media only screen and (min-width: 1920px) {
+      font-size: 24px;
+    }
+    letter-spacing: 0px;
+    color: #707070;
+  }
+  .company-details {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .push {
+    @media only screen and (min-width: 1920px) {
+      height: 90px;
+    }
+    height: 70px;
+  }
+}
+
+.hide-loading-cards {
+  opacity: 0;
+  transition: all 1s ease-in-out;
+}
+
+.loading-cards {
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  @media only screen and (min-width: 1920px) {
+    max-width: 1270px;
+    height: calc(100% - 482px);
+  }
+  @media only screen and (min-width: 1024px) and (max-width: 1919px) {
+    max-width: 904px;
+    height: calc(100% - 422px);
+  }
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    max-width: 674px;
+    height: calc(100% - 422px);
+  }
+  @media only screen and (min-width: 320px) and (max-width: 767px) {
+    max-width: 90%;
+    height: calc(100% - 375px);
+  }
+  .loading-card {
+    background: #f7f7f7;
+    border-radius: 10px;
+    opacity: 1;
+    margin-right: 1rem;
+    @media only screen and (min-width: 320px) and (max-width: 767px) {
+      margin-right: 0rem;
+    }
+    width: 100%;
+  }
+  .loading-card1,
+  .loading-card3 {
+    @media only screen and (min-width: 1920px) {
+      width: 300px;
+      height: calc(100% - 80px);
+    }
+    @media only screen and (min-width: 1024px) and (max-width: 1919px) {
+      width: 214px;
+      height: calc(100% - 80px);
+    }
+    @media only screen and (min-width: 768px) and (max-width: 1023px) {
+      width: 214px;
+      height: calc(100% - 80px);
+    }
+    @media only screen and (min-width: 320px) and (max-width: 767px) {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .loading-card3 {
+    @media only screen and (min-width: 320px) and (max-width: 767px) {
+      display: none;
+    }
+  }
+  .loading-card4 {
+    @media only screen and (min-width: 768px) and (max-width: 1023px) {
+      display: none;
+    }
+  }
+  .loading-card2,
+  .loading-card4 {
+    @media only screen and (min-width: 1920px) {
+      width: 300px;
+      height: 100%;
+    }
+    @media only screen and (min-width: 1024px) and (max-width: 1919px) {
+      width: 214px;
+      height: 100%;
+    }
+    @media only screen and (min-width: 768px) and (max-width: 1023px) {
+      width: 214px;
+      height: 100%;
+    }
+    @media only screen and (min-width: 320px) and (max-width: 767px) {
+      display: none;
+    }
+  }
+}

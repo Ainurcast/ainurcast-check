@@ -1,0 +1,9 @@
+<svg id="Copy" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="Button_Body" data-name="Button Body" transform="translate(0)">
+    <rect id="Rectangle_170" data-name="Rectangle 170" width="24" height="24" transform="translate(0)" fill="none"/>
+    <g id="Path_Group" data-name="Path Group">
+      <path id="Path_723" data-name="Path 723" d="M19.229,2H9.771A2.774,2.774,0,0,0,7,4.771a1,1,0,0,0,2,0A.772.772,0,0,1,9.771,4h9.458A.772.772,0,0,1,20,4.771V15.229a.772.772,0,0,1-.771.771,1,1,0,0,0,0,2A2.774,2.774,0,0,0,22,15.229V4.771A2.774,2.774,0,0,0,19.229,2Z" fill="#999"/>
+      <path id="Path_724" data-name="Path 724" d="M14.229,7H4.771A2.774,2.774,0,0,0,2,9.771v9.458A2.774,2.774,0,0,0,4.771,22h9.458A2.774,2.774,0,0,0,17,19.229V9.771A2.774,2.774,0,0,0,14.229,7ZM15,19.229a.772.772,0,0,1-.771.771H4.771A.772.772,0,0,1,4,19.229V9.771A.772.772,0,0,1,4.771,9h9.458A.772.772,0,0,1,15,9.771Z" fill="#999"/>
+    </g>
+  </g>
+</svg>

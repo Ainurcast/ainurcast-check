@@ -1,0 +1,29 @@
+.custom-snackbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    padding: 10px 12px;
+    border-radius: 4px;
+    z-index: 1400;
+    position: fixed;
+    bottom: 8px;
+    opacity: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.custom-snackbar.show {
+    opacity: 1;
+}
+
+.custom-snackbar .message {
+    font-size: 12px;
+    margin-left: 5px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.01071em;
+    display: inline;
+    vertical-align: middle;
+}

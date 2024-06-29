@@ -1,0 +1,3 @@
+export const GET_ADMIN_USER = "GET_ADMIN_USER";
+export const SET_ADMIN_USER = "SET_ADMIN_USER";
+export const UPDATE_TABLE_DATA = "UPDATE_TABLE_DATA";

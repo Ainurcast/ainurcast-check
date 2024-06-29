@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:300,400,500,600,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sarina&display=swap");
+// Font Variables
+$montserrat_font: "Montserrat", sans-serif;
+$sarina_font: "Sarina", cursive;
+$roboto_font: "Roboto";
+
+// Font Sizes
+$fs-default: 0.875rem;
+$fs-8: 0.5714rem;
+$fs-10: 0.625rem;
+$fs-11: 0.6875rem;
+$fs-12: 0.75rem;
+$fs-13: 0.8125rem;
+$fs-14: $fs-default;
+$fs-15: 0.9375rem;
+$fs-16: 1rem;
+$fs-18: 1.125rem;
+$fs-20: 1.25rem;
+$fs-21: 1.3125rem;
+$fs-22: 1.375rem;
+$fs-24: 1.5rem;
+$fs-25: 1.5625rem;
+$fs-30: 2 * $fs-15;
+$fs-32: 2 * $fs-16;
+$fs-40: 2 * $fs-20;
+$fs-40: 2 * $fs-20;
+$fs-42: 2 * $fs-21;
+$fs-44: 2 * $fs-22;
+$fs-48: 2 * $fs-24;
+$fs-50: 2 * $fs-25;
+$fs-60: 2 * $fs-30;
+$fs-126: 9rem;
+
+// Font Weights
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-semi-bold: 600;
+$fw-bold: 700;
+$fw-300: 300;
+$fw-extra-bold: 900;
+
+// Colors
+
+$fc-black: #212121;
+$fc-grey: #6b6b6b;
+$fc-red: #a86200;
+$fc-white: #ffffff;
+$fc-pure-black: #000000;

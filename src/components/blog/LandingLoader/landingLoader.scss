@@ -1,0 +1,131 @@
+.landing-loader-container {
+  margin: 0 auto;
+  @media only screen and (min-width: 1920px) {
+    max-width: 1270px;
+  }
+  @media only screen and (min-width: 1024px) and (max-width: 1919px) {
+    max-width: 904px;
+  }
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    max-width: 674px;
+  }
+  @media only screen and (min-width: 320px) and (max-width: 767px) {
+    max-width: 90%;
+  }
+  .app-logo {
+    margin: 100px 0px 20px 0px;
+    @media only screen and (min-width: 1920px) {
+      width: 280px;
+      height: 243px;
+    }
+    @media only screen and (min-width: 320px) and (max-width: 767px) {
+      width: 170px;
+      height: 147px;
+    }
+  }
+  .company-vision {
+    text-align: center;
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 20px;
+    @media only screen and (min-width: 320px) and (max-width: 767px) {
+      font-size: 16px;
+    }
+    @media only screen and (min-width: 1920px) {
+      font-size: 24px;
+    }
+    letter-spacing: 0px;
+    color: #707070;
+  }
+  .company-details {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .push {
+    @media only screen and (min-width: 1920px) {
+      height: 90px;
+    }
+    height: 70px;
+  }
+}
+
+.loading-cards {
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  @media only screen and (min-width: 1920px) {
+    max-width: 1270px;
+    height: calc(100% - 482px);
+  }
+  @media only screen and (min-width: 1024px) and (max-width: 1919px) {
+    max-width: 904px;
+    height: calc(100% - 422px);
+  }
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    max-width: 674px;
+    height: calc(100% - 422px);
+  }
+  @media only screen and (min-width: 320px) and (max-width: 767px) {
+    max-width: 90%;
+    height: calc(100% - 375px);
+  }
+  .loading-card {
+    background: #f7f7f7;
+    border-radius: 10px;
+    opacity: 1;
+    margin-right: 1rem;
+    @media only screen and (min-width: 320px) and (max-width: 767px) {
+      margin-right: 0rem;
+    }
+    width: 100%;
+  }
+  .loading-card1,
+  .loading-card3 {
+    @media only screen and (min-width: 1920px) {
+      width: 300px;
+      height: calc(100% - 80px);
+    }
+    @media only screen and (min-width: 1024px) and (max-width: 1919px) {
+      width: 214px;
+      height: calc(100% - 80px);
+    }
+    @media only screen and (min-width: 768px) and (max-width: 1023px) {
+      width: 214px;
+      height: calc(100% - 80px);
+    }
+    @media only screen and (min-width: 320px) and (max-width: 767px) {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .loading-card3 {
+    @media only screen and (min-width: 320px) and (max-width: 767px) {
+      display: none;
+    }
+  }
+  .loading-card4 {
+    @media only screen and (min-width: 768px) and (max-width: 1023px) {
+      display: none;
+    }
+  }
+  .loading-card2,
+  .loading-card4 {
+    @media only screen and (min-width: 1920px) {
+      width: 300px;
+      height: 100%;
+    }
+    @media only screen and (min-width: 1024px) and (max-width: 1919px) {
+      width: 214px;
+      height: 100%;
+    }
+    @media only screen and (min-width: 768px) and (max-width: 1023px) {
+      width: 214px;
+      height: 100%;
+    }
+    @media only screen and (min-width: 320px) and (max-width: 767px) {
+      display: none;
+    }
+  }
+}

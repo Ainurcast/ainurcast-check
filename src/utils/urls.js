@@ -1,0 +1,23 @@
+export default {
+  LOGIN: "umng/login/",
+  REGISTER: "umng/useracc/",
+  USER_DETAILS: "umng/useracc/",
+  USER_PODCAST: "pdcts/userpodcast/",
+  CREATE_PODCAST: "pdcts/userpodcast/",
+  GET_EPISODES: "pdcts/userpodcast/episode/",
+  CREATE_EPISODE: "pdcts/userpodcast/episode/",
+  GET_DROPDOWN_DATA: "pdcts/dropdown-options/",
+  UPDATE_EPISODE: "pdcts/userpodcast/episode/deup/",
+  GET_EPISODE_DETAILS: "pdcts/userpodcast/episode/deup/",
+  UPLOAD_FILE: "pdcts/file_upload/",
+  PUBLISH_PODCAST: "pdcts/publish_podcast/",
+  UPDATE_PODCAST: "pdcts/userpodcast/deup/",
+  VERIFY_EMAIL: "umng/email_verification",
+  CHANGE_PASSWORD: "umng/change-password/",
+  RESET_PASSWORD: "umng/reset-password/",
+  SET_PASSWORD: "umng/set-password/",
+  ADMIN_USER: "pdcts/all_podcast/",
+  RESEND_EMAIL: "umng/email-verification/resend/",
+  PASSWORD_HASH: "umng/authenticate/",
+  VIOLATIONS_RETRY: "pdcts/retry-ott-publish/"
+};

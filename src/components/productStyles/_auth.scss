@@ -1,0 +1,246 @@
+.auth-container {
+    width: 100%;
+    display: flex;
+    height: 100vh;
+
+    @media screen and (min-width: 320px) and (max-width: 1024px) {
+        flex-direction: column;
+    }
+
+    .mobile-logo {
+        margin: 50px auto;
+    }
+
+    .ainurcast-auth-img {
+        width: 50%;
+        background-image: url("/assets/login-bg-md.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        // @media screen and (min-width: 1920px) {
+        //     background-image: url("/assets/login-bg-lg.png");
+        // }
+
+        @media screen and (min-width: 768px) and (max-width: 1024px) {
+            width: 100%;
+            height: 30%;
+            background-image: url("/assets/login-bg-sm.png");
+            margin-bottom: 40px;
+            background-size: contain;
+            background-position: inherit;
+        }
+
+        @media screen and (min-width: 320px) and (max-width: 767px) {
+            background-image: url("/assets/login-bg-sm.png");
+            width: 100%;
+            height: 20%;
+            margin-bottom: 40px;
+        }
+
+        .auth-image-bg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    @mixin card-desc {
+        font-family: $roboto_font;
+        line-height: 21px;
+        letter-spacing: 0.28px;
+        color: #6b6b6b;
+    }
+
+    .render-auth-form {
+        width: 50%;
+        @media screen and (min-width: 768px) and (max-width: 1024px) {
+            width: 100%;
+            align-items: unset;
+        }
+
+        @media screen and (min-width: 320px) and (max-width: 767px) {
+            width: unset;
+            margin: 0 16px;
+        }
+
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+
+        .reset-password-container {
+            width: 436px;
+            .reset-password-title {
+                font-size: $fs-24;
+                font-weight: $fw-bold;
+                color: $fc-black;
+            }
+        }
+
+        .login-container {
+            width: 436px;
+
+            .login-hd {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 38px;
+
+                .signin-hd {
+                    color: $fc-black;
+                    font-size: 24px;
+                    font-weight: 600;
+                }
+            }
+
+            .login-form-element {
+                margin-bottom: 30px;
+            }
+
+            .forgot-password {
+                margin: 8px 0px 16px 0px;
+                color: $fc-black;
+                font-size: 16px;
+                font-weight: 500;
+                display: flex;
+                justify-content: flex-end;
+            }
+
+            .social-sign-up {
+                margin-top: 24px;
+            }
+        }
+
+        .register-container {
+            width: 436px;
+            .setting-card {
+                width: 421px;
+                @media screen and (min-width: 320px) and (max-width: 767px) {
+                    width: unset;
+                }
+                height: 222px;
+                background: #fffdf7 0% 0% no-repeat padding-box;
+                box-shadow: 0px 2px 6px #00000029;
+                border: 1px solid #fffae5;
+                border-radius: 8px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .setting-text {
+                    font-size: $fs-24;
+                    font-family: $montserrat_font;
+                    font-weight: $fw-extra-bold;
+                }
+            }
+            .card {
+                padding: 40px;
+                background: #fffdf7;
+                box-shadow: 0px 2px 6px #00000029;
+                border: 1px solid #fffae5;
+                border-radius: 8px;
+                @media screen and (min-width: 320px) and (max-width: 767px) {
+                    padding: 20px;
+                }
+                .card-content {
+                    .email-verification {
+                        .email-verify-hd {
+                            color: #212121;
+                            font-size: $fs-14;
+                            font-weight: $fw-bold;
+                            letter-spacing: 0.28px;
+                        }
+                        .email-verify-desc {
+                            @include card-desc();
+                            margin: 24px 0;
+                            .user-name {
+                                color: #212121;
+                                font-weight: $fw-bold;
+                            }
+                        }
+                        .resend-email-wrapper {
+                            display: flex;
+                            @media screen and (min-width: 320px) and (max-width: 767px) {
+                                display: block;
+                            }
+                            align-items: center;
+                            .din-find-email {
+                                @include card-desc();
+                                margin-right: 16px;
+                                .resend-email-btn {
+                                    font-size: $fs-16;
+                                    letter-spacing: 0.16px;
+                                    color: #212121;
+                                    font-weight: 500;
+                                }
+                            }
+                            .resend-email-btn {
+                                letter-spacing: 0.16px;
+                                color: #212121;
+                                font-family: $roboto_font;
+
+                                font-size: $fs-16;
+                            }
+                        }
+                    }
+                }
+            }
+            .other-signins-divider {
+                display: flex;
+                align-items: center;
+                margin-bottom: 32px;
+                margin-top: 40px;
+                .dash {
+                    border-bottom: 1px solid #d9d9d9;
+                    height: 1px;
+                    width: 100%;
+                }
+                .or {
+                    margin: 0 4px;
+                    font-size: $fs-14;
+                    letter-spacing: 0.28px;
+                    font-family: $roboto_font;
+                }
+            }
+            .register-hd {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 38px;
+
+                .signup-hd {
+                    color: $fc-black;
+                    font-size: 24px;
+                    font-weight: 600;
+                }
+            }
+
+            .register-form-element {
+                margin-bottom: 30px;
+            }
+            .forgot-password {
+                margin: 8px 0px 16px 0px;
+                text-align: right;
+                color: $fc-black;
+                font-size: 16px;
+                font-weight: 500;
+                display: flex;
+                justify-content: flex-end;
+            }
+
+            .social-sign-up {
+                margin-top: 24px;
+            }
+        }
+    }
+}
+
+.email-success-content {
+    font-size: $fs-14;
+    font-family: $roboto_font;
+    letter-spacing: 0.28px;
+    line-height: 21px;
+}
+
+.user-name {
+    color: #212121;
+    font-weight: $fw-bold;
+}

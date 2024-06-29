@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+  <g id="dropdown_caret" data-name="dropdown caret" transform="translate(30 30) rotate(180)">
+    <g id="Button_body" data-name="Button body" transform="translate(5 6)">
+      <rect id="Rectangle_106" data-name="Rectangle 106" width="20" height="20" fill="none"/>
+      <path id="Path_424" data-name="Path 424" d="M10.81,14.667a.7.7,0,0,1-.5-.209L5.206,9.268a.724.724,0,0,1,0-1.011.7.7,0,0,1,.995,0l4.609,4.683,4.656-4.732a.7.7,0,0,1,.995,0,.724.724,0,0,1,0,1.011l-5.153,5.238A.7.7,0,0,1,10.81,14.667Z" transform="translate(-0.833 -1.333)" fill="#212121"/>
+    </g>
+  </g>
+</svg>
