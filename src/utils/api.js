@@ -6,7 +6,7 @@ const handleSuccess = (response) => {
 };
 
 // const BASE_URL = "https://api-v1.ainurcast.com/";
-const BASE_URL = "https://a9b2-2406-7400-61-657c-696b-6002-8e66-d395.ngrok-free.app/";
+const BASE_URL = "http://localhost:9000/api/";
 
 
 const handleError = (error) => {
